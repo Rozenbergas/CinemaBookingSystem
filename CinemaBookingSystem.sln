@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Console", "Cinema.Console\Cinema.Console.csproj", "{D016B98F-69EF-42A0-B244-98FE3BF4296D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Logic", "Cinema.Logic\Cinema.Logic.csproj", "{E22DDD57-51C4-494D-ACFD-D2486E3C9D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Web", "Cinema.Web\Cinema.Web.csproj", "{F2C3218C-FFFA-4EFD-80E8-7E504C93BCB6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D016B98F-69EF-42A0-B244-98FE3BF4296D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D016B98F-69EF-42A0-B244-98FE3BF4296D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D016B98F-69EF-42A0-B244-98FE3BF4296D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D016B98F-69EF-42A0-B244-98FE3BF4296D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22DDD57-51C4-494D-ACFD-D2486E3C9D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22DDD57-51C4-494D-ACFD-D2486E3C9D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22DDD57-51C4-494D-ACFD-D2486E3C9D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22DDD57-51C4-494D-ACFD-D2486E3C9D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2C3218C-FFFA-4EFD-80E8-7E504C93BCB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C3218C-FFFA-4EFD-80E8-7E504C93BCB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C3218C-FFFA-4EFD-80E8-7E504C93BCB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C3218C-FFFA-4EFD-80E8-7E504C93BCB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
