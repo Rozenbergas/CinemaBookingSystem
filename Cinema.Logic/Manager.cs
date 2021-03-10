@@ -28,5 +28,20 @@ namespace Cinema.Logic
                 return db.MovieInfo.OrderByDescending(a => a.CategorieId).Take(categorieid).ToList();
             }
         }
+        public List<Basket> AddToBasket(int count, string title)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Basket> RemoveFromBasket(int count, string title)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Basket> TotalAmount(int count, int price)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

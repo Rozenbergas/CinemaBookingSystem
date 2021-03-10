@@ -16,11 +16,7 @@ namespace Cinema.Logic
             Movies = new List<MovieInfo>();
         }
 
-        public decimal TotalAmount()
-        {
-            throw new NotImplementedException();
-        }
-    }
+    }  
     
 
     
