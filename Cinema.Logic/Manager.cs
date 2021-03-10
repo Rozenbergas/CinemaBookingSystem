@@ -28,18 +28,18 @@ namespace Cinema.Logic
                 return db.MovieInfo.OrderByDescending(a => a.CategorieId).Take(categorieid).ToList();
             }
         }
-        //public List<Basket> AddToBasket(int count, string title)
-        //{
-        //    using (var db = new CinemaDB())
-        //    {
-        //        var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
-        //        if (movie != null)
-        //        {
-                    
-        //        }
-        //    }
-        //    return null;
-        //}
+        public List<Basket> AddToBasket(int count, string title)
+        {
+            using (var db = new CinemaDB())
+            {
+                var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
+                if (movie != null)
+                {
+
+                }
+            }
+            return null;
+        }
 
         public List<Basket> RemoveFromBasket(int count, string title)
         {
