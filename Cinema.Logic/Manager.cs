@@ -15,11 +15,18 @@ namespace Cinema.Logic
 
         public List<MovieInfo> GetAllMovies()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using (var db = new CinemaDB())
+            {
+                return db.MovieInfo.OrderByDescending(a => a.Title).ToList();
+            }
         }
-        public List<Categories> GetMoviesByCategories(int categorieid)
+        public List<MovieInfo> GetMoviesByCategories(int categorieid)
         {
-            throw new NotImplementedException();
+           using(var db = new CinemaDB())
+            {
+                return db.MovieInfo.OrderByDescending(a => a.CategorieId).Take(categorieid).ToList();
+            }
         }
     }
 }
