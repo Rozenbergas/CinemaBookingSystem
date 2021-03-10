@@ -13,13 +13,10 @@ namespace Cinema.Logic
 
         }
 
-        //public List<CinemaDB> GetAvailableMovies()
-        //{
-        //    using (var db = new Cinema())
-        //    {
-        //        return db.Cinema.OrderBy(b => b.Title).ToList();
-        //    }
-        //}
+        public List<MovieInfo> GetAllMovies()
+        {
+            throw new NotImplementedException();
+        }
         public List<Categories> GetMoviesByCategories(int categorieid)
         {
             throw new NotImplementedException();
