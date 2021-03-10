@@ -20,7 +20,8 @@ namespace Cinema.Logic.DB
         }
 
         public virtual DbSet<Categories> Categories { get; set; }
-        public virtual DbSet<Cinema> Cinema { get; set; }
+        public virtual DbSet<MovieInfo> MovieInfo { get; set; }
+        public virtual DbSet<Timetable> Timetable { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -43,7 +44,7 @@ namespace Cinema.Logic.DB
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Cinema>(entity =>
+            modelBuilder.Entity<MovieInfo>(entity =>
             {
                 entity.Property(e => e.PricePerPerson)
                     .HasColumnName("Price (per person)")

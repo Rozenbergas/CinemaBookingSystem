@@ -7,15 +7,11 @@ using System.Collections.Generic;
 
 namespace Cinema.Logic.DB
 {
-
-    public partial class Cinema
+    public partial class MovieInfo
     {
         public int Id { get; set; }
-        public int Categorie { get; set; }
+        public int CategorieId { get; set; }
         public string Title { get; set; }
         public decimal PricePerPerson { get; set; }
-        public TimeSpan? Time1 { get; set; }
-        public TimeSpan? Time2 { get; set; }
-        public TimeSpan? Time3 { get; set; }
     }
 }

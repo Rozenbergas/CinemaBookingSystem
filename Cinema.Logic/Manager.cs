@@ -12,10 +12,10 @@ namespace Cinema.Logic
         {
 
         }
-        
-        //public List<Cinema> GetAvailableMovies()
+
+        //public List<CinemaDB> GetAvailableMovies()
         //{
-        //    using (var db = new CinemaDB())
+        //    using (var db = new Cinema())
         //    {
         //        return db.Cinema.OrderBy(b => b.Title).ToList();
         //    }
