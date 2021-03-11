@@ -13,8 +13,13 @@ namespace Cinema.Logic
 
         public Basket()
         {
-            Movies = new List<MovieInfo>();
+
         }
+        //public Basket()
+        //{
+        //    Movies = new List<MovieInfo>();
+        //}
+
 
     }  
     

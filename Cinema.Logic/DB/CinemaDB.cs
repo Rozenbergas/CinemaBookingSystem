@@ -55,6 +55,15 @@ namespace Cinema.Logic.DB
                     .HasMaxLength(50);
             });
 
+            modelBuilder.Entity<Timetable>(entity =>
+            {
+                entity.Property(e => e.Time1).HasColumnType("datetime");
+
+                entity.Property(e => e.Time2).HasColumnType("datetime");
+
+                entity.Property(e => e.Time3).HasColumnType("datetime");
+            });
+
             OnModelCreatingPartial(modelBuilder);
         }
 

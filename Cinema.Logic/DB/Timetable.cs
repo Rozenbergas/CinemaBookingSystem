@@ -11,8 +11,8 @@ namespace Cinema.Logic.DB
     {
         public int Id { get; set; }
         public int? MovieId { get; set; }
-        public TimeSpan Time1 { get; set; }
-        public TimeSpan Time2 { get; set; }
-        public TimeSpan Time3 { get; set; }
+        public DateTime Time1 { get; set; }
+        public DateTime Time2 { get; set; }
+        public DateTime Time3 { get; set; }
     }
 }
