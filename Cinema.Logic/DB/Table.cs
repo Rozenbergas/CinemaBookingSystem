@@ -7,11 +7,8 @@ using System.Collections.Generic;
 
 namespace Cinema.Logic.DB
 {
-    public partial class Timetable
+    public partial class Table
     {
         public int Id { get; set; }
-        public int? MovieId { get; set; }
-        public DateTime Time { get; set; }
-        public int? SeatsAvailable { get; set; }
     }
 }

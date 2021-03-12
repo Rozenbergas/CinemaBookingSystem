@@ -21,6 +21,8 @@ namespace Cinema.Logic.DB
 
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<MovieInfo> MovieInfo { get; set; }
+        public virtual DbSet<Rservation> Rservation { get; set; }
+        public virtual DbSet<Table> Table { get; set; }
         public virtual DbSet<Timetable> Timetable { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -57,11 +59,9 @@ namespace Cinema.Logic.DB
 
             modelBuilder.Entity<Timetable>(entity =>
             {
-                entity.Property(e => e.Time1).HasColumnType("datetime");
+                entity.Property(e => e.SeatsAvailable).HasDefaultValueSql("((10))");
 
-                entity.Property(e => e.Time2).HasColumnType("datetime");
-
-                entity.Property(e => e.Time3).HasColumnType("datetime");
+                entity.Property(e => e.Time).HasColumnType("datetime");
             });
 
             OnModelCreatingPartial(modelBuilder);
