@@ -1,6 +1,7 @@
 ﻿using Cinema.Logic.DB;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Cinema.Logic
@@ -10,39 +11,61 @@ namespace Cinema.Logic
         public List<MovieInfo> Movies { get; set; }
 
         public int TicketCount { get; set; }
+        
+        public List<Timetable> Movietime { get; set; }
 
         
         public Basket()
         {
             Movies = new List<MovieInfo>();
+            Movietime = new List<Timetable>();
+            
         }
-        public List<Basket> RemoveFromBasket(int count, string title)
+        public List<Basket> RemoveFromBasket(string title)
         {
-            throw new NotImplementedException();
+            using (var db = new CinemaDB())
+            {
+                var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
+
+                if (movie != null)
+                {
+
+                    db.Rservation.Remove(new Rservation()
+                    {
+                        MovieId = movie.Id,
+
+                    });
+                    db.SaveChanges();
+                }
+            }
+            return null;
         }
 
+        
+        public List<Rservation> AddToBasket(string title)
+        {
+            
+            using (var db = new CinemaDB())
+            {
+                var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
+                
+                if (movie != null)
+                {
+
+                    db.Rservation.Add(new Rservation()
+                    {
+                        MovieId = movie.Id,
+                        
+                    });
+                    db.SaveChanges();
+                }
+            }
+            return null;
+        }
         public List<Basket> TotalAmount(int count, int price)
         {
             throw new NotImplementedException();
         }
-
-        //public Basket AddToBasket(int count, string title)
-        //{
-        //    count = int.Parse(Console.ReadLine());
-        //    using (var db = new CinemaDB())
-        //    {
-        //        var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
-        //        if (movie != null)
-        //        {
-        //            for (int i = 0; i < count; i++)
-        //            {
-
-        //            }
-
-        //        }
-        //    }
-        //    return null;
-        //}
 
     }
 
