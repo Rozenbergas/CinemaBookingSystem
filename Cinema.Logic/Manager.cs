@@ -28,24 +28,26 @@ namespace Cinema.Logic
                 return db.MovieInfo.OrderByDescending(a => a.CategorieId).Take(categorieid).ToList();
             }
         }
-        //public Basket AddToBasket(int count, string title)
-        //{
-        //    count = int.Parse(Console.ReadLine());
-        //    using (var db = new CinemaDB())
-        //    {
-        //        var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
-        //        if (movie != null)
-        //        {
-        //            for (int i = 0; i < count; i++)
-        //            {
-                        
-        //            }
 
-        //        }
-        //    }
-        //    return null;
-        //}
-
+        public List<Timetable> GetTimetable()
+        {
+            using (var db = new CinemaDB())
+            {
+                return db.Timetable.ToList();
+            }
+        }
+        public MovieInfo SelectMovieWithTime(string title)
+        {
+            using (var db = new CinemaDB())
+            {
+                var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
+                if (movie != null)
+                {
+                    return movie;
+                }
+            }
+            return null;
+        }
         public List<Basket> RemoveFromBasket(int count, string title)
         {
             throw new NotImplementedException();
@@ -56,5 +58,22 @@ namespace Cinema.Logic
             throw new NotImplementedException();
         }
 
+        //public Basket AddToBasket(int count, string title)
+        //{
+        //    count = int.Parse(Console.ReadLine());
+        //    using (var db = new CinemaDB())
+        //    {
+        //        var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
+        //        if (movie != null)
+        //        {
+        //            for (int i = 0; i < count; i++)
+        //            {
+
+        //            }
+
+        //        }
+        //    }
+        //    return null;
+        //}
     }
 }
