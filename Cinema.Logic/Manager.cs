@@ -36,7 +36,7 @@ namespace Cinema.Logic
                 return db.Timetable.ToList();
             }
         }
-        public MovieInfo SelectMovieWithTime(string title)
+        public MovieInfo SelectMovieWithTitle(string title)
         {
             using (var db = new CinemaDB())
             {
@@ -48,32 +48,6 @@ namespace Cinema.Logic
             }
             return null;
         }
-        public List<Basket> RemoveFromBasket(int count, string title)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Basket> TotalAmount(int count, int price)
-        {
-            throw new NotImplementedException();
-        }
-
-        //public Basket AddToBasket(int count, string title)
-        //{
-        //    count = int.Parse(Console.ReadLine());
-        //    using (var db = new CinemaDB())
-        //    {
-        //        var movie = db.MovieInfo.FirstOrDefault(m => m.Title.ToLower() == title.ToLower());
-        //        if (movie != null)
-        //        {
-        //            for (int i = 0; i < count; i++)
-        //            {
-
-        //            }
-
-        //        }
-        //    }
-        //    return null;
-        //}
+        
     }
 }
