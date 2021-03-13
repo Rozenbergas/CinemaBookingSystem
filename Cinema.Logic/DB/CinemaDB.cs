@@ -22,7 +22,6 @@ namespace Cinema.Logic.DB
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<MovieInfo> MovieInfo { get; set; }
         public virtual DbSet<Reservation> Reservation { get; set; }
-        //public virtual DbSet<Rservation> Rservation { get; set; }
         public virtual DbSet<Timetable> Timetable { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -48,13 +47,17 @@ namespace Cinema.Logic.DB
 
             modelBuilder.Entity<MovieInfo>(entity =>
             {
+                entity.Property(e => e.Description).HasMaxLength(2000);
+
+                entity.Property(e => e.Director).HasMaxLength(200);
+
+                entity.Property(e => e.Image).HasMaxLength(350);
+
                 entity.Property(e => e.PricePerPerson)
                     .HasColumnName("Price (per person)")
                     .HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.Title)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                entity.Property(e => e.Title).HasMaxLength(150);
             });
 
             modelBuilder.Entity<Timetable>(entity =>
