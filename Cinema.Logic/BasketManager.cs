@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Cinema.Logic
 {
-    public class Basket
+    public class BasketManager
     {
         public List<MovieInfo> Movies { get; set; }
 
@@ -15,13 +15,13 @@ namespace Cinema.Logic
         public List<Timetable> Movietime { get; set; }
 
         
-        public Basket()
+        public BasketManager()
         {
             Movies = new List<MovieInfo>();
             Movietime = new List<Timetable>();
             
         }
-        public List<Basket> RemoveFromBasket(string title)
+        public List<BasketManager> RemoveFromBasket(string title)
         {
             using (var db = new CinemaDB())
             {
@@ -62,7 +62,7 @@ namespace Cinema.Logic
             }
             return null;
         }
-        public List<Basket> TotalAmount(int count, int price)
+        public List<BasketManager> TotalAmount(int count, int price)
         {
             throw new NotImplementedException();
         }
