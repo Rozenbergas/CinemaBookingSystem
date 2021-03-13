@@ -30,7 +30,7 @@ namespace Cinema.Logic
                 if (movie != null)
                 {
 
-                    db.Rservation.Remove(new Rservation()
+                    db.Reservation.Remove(new Reservation()
                     {
                         MovieId = movie.Id,
 
@@ -42,7 +42,7 @@ namespace Cinema.Logic
         }
 
         
-        public List<Rservation> AddToBasket(string title)
+        public List<Reservation> AddToBasket(string title)
         {
             
             using (var db = new CinemaDB())
@@ -52,7 +52,7 @@ namespace Cinema.Logic
                 if (movie != null)
                 {
 
-                    db.Rservation.Add(new Rservation()
+                    db.Reservation.Add(new Reservation()
                     {
                         MovieId = movie.Id,
                         

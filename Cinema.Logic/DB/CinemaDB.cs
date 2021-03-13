@@ -21,8 +21,8 @@ namespace Cinema.Logic.DB
 
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<MovieInfo> MovieInfo { get; set; }
-        public virtual DbSet<Rservation> Rservation { get; set; }
-        public virtual DbSet<Table> Table { get; set; }
+        public virtual DbSet<Reservation> Reservation { get; set; }
+        //public virtual DbSet<Rservation> Rservation { get; set; }
         public virtual DbSet<Timetable> Timetable { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

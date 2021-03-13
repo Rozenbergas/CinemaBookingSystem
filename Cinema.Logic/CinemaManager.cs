@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Cinema.Logic
 {
-    public class Manager
+    public class CinemaManager
     {
-       public Manager()
+       public CinemaManager()
         {
 
         }

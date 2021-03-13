@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Cinema.Logic.DB
 {
-    public partial class Rservation
+    public partial class Reservation
     {
         public int Id { get; set; }
         public int MovieId { get; set; }
