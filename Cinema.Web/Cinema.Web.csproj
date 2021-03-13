@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Cinema.Logic\Cinema.Logic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Cinema\" />
+  </ItemGroup>
+
 </Project>
