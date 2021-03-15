@@ -16,7 +16,7 @@ namespace Cinema.Web.Controllers
             return View(mov);
         }
 
-
+        
         
     }
 }
